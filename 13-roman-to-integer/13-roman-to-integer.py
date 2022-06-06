@@ -1,47 +1,45 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
+        
+        ch1={}
+        ch2={}
+        
+        ch1={
+            "IV":4,
+            "IX":9,
+            "XL":40,
+            "XC":90,
+            "CD":400,
+            "CM":900
+        }
+        
+        ch2 = {
+        "I":1,
+        "V":5,
+        "X":10,
+        "L":50,
+        "C":100,
+        "D":500,
+        "M":1000
+        }      
+            
         c=0
         i=0
+
         while i < len(s) :  
+            # print(s[i],s[i+1])
             
-            if s[i] == 'L':
-                c=c+50
-            elif s[i] == 'V':
-                c=c+5    
-            elif s[i] == 'D':
-                c=c+500
-            elif s[i] == 'M':
-                c=c+1000     
             
-            elif s[i] == 'I':
-                if i+1 < len(s) and s[i+1] == 'V':
-                    i+=1
-                    c=c+4
-                elif i+1 < len(s) and s[i+1] == 'X':
-                    i+=1
-                    c=c+9
-                else:    
-                    c=c+1
+            if i+1 < len(s) and (s[i]+s[i+1]) in ch1:
+                c += ch1[s[i]+s[i+1]]
+                i+=2
+            elif s[i] in ch2:
+                c += ch2[s[i]]
+                i+=1
+            else:
+                i+=1
+            print (c )   
+
             
-            elif s[i] == 'X':
-                if i+1 < len(s) and s[i+1] == 'L':
-                    i+=1
-                    c=c+40 
-                elif i+1 < len(s) and s[i+1] == 'C':
-                    i+=1
-                    c=c+90
-                else:    
-                    c=c+10
-                    
-            elif s[i] == 'C':
-                if i+1 < len(s) and s[i+1] == 'D':
-                    i+=1
-                    c=c+400       
-                elif i+1 < len(s) and s[i+1] == 'M':
-                    i+=1 
-                    c=c+900
-                else:
-                    c=c+100
             
-            i+=1      
         return c
