@@ -9,12 +9,12 @@ class Solution:
         
         i=0
         while i < len(nums):
-            if i+1 <= len(nums):
-                if nums[i] == nums[i+1]:
-                    del nums[i]
-                    i=0
-                else:
-                    i+=1 
+            # if i+1 <= len(nums):
+            if nums[i] == nums[i+1]:
+                del nums[i]
+                i=0
+            else:
+                i+=1 
             
             if lennum == len(nums):
                 break
