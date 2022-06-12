@@ -15,15 +15,12 @@ class Solution:
         def inorder(root):
         
             if root:
-                # print("hereee")
                 inorder(root.left)
                 nums.append(root.val)
-                inorder(root.right)   
-            print(nums)   
+                inorder(root.right)      
             return nums
         
         nums=[]
         ans = inorder(root)
-        print(ans)
         return ans
         
