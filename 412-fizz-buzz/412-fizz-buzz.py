@@ -12,7 +12,5 @@ class Solution:
                 ans.append("FizzBuzz")
             else:
                 ans.append(str(i))
-        
-        print(ans)
         return ans
             
