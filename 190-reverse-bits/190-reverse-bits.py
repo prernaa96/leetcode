@@ -5,8 +5,8 @@ class Solution:
         n = str(n)
         n = n[2:]
         
-        rev_str = n[::-1]+ (32 - len(n))*'0'
-        rev_bin = int(rev_str, 2)
+        n = n[::-1]+ (32 - len(n))*'0'
+        n = int(n, 2)
         
-        return rev_bin
+        return n
         
