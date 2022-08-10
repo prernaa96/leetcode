@@ -4,7 +4,7 @@ class Solution:
         if n ==1:
             return True
        
-        checkset = set()
+        checkset = []
         def calc(n):
             total=0
             while n!=0:
@@ -27,7 +27,7 @@ class Solution:
                 if total ==1:
                     return True
                 else:
-                    checkset.add(total)      
+                    checkset.append(total)      
           
     
     
