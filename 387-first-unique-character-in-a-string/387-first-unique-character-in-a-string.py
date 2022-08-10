@@ -1,12 +1,18 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         
-        a=0
+        dic={}
+        
         for i in range(len(s)):
-            a=s.count(s[i])
-            # print(a)
-            if a == 1:
-                return i
+            dic[s[i]] = dic.get(s[i],0) + 1
+            
+            # print(dic)
+        
+        for k,v in dic.items():
+            if v == 1:
+                ind = s.index(k)
+                return ind
+           
         return -1
             
                 
