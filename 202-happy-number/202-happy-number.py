@@ -27,7 +27,7 @@ class Solution:
                 if total ==1:
                     return True
                 else:
-                    checkset.append(total)      
+                    checkset.append(total)  
           
     
     
