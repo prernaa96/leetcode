@@ -12,12 +12,11 @@ class Solution:
         
         for j in range(len(t)):
             dic2[t[j]] = dic2.get(t[j],0)+1
+            
+        if dic == dic2:
+            return True
+        else:
+            return False
         
-        for k,v in dic.items():
-            if k in dic2:
-                if dic[k] != dic2[k]:
-                    return False
-            else:
-                return False
-        return True        
+                
             
