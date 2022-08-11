@@ -6,14 +6,10 @@ class Solution:
         
         if n ==1:
             return True
-        
-        for i in range(n):
-            n = n/3
             
+        while n!=1:
             if n % 3 != 0:
-                if n != 1:
-                    return False
+                return False
             
-            if n == 1:
-                return True
-            
+            n = n/3
+        return True    
