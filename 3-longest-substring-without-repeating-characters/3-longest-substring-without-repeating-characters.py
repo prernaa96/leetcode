@@ -4,37 +4,20 @@ class Solution:
         if s ==" " or len(s)==1:
             return 1
         
+        checked={}
         i=0
-        j=0
-        store=""
-        longest=""
-        while i < len(s):
-            if s[i] in store:
-                if len(longest) < len(store):
-                    longest = store 
-                store=""    
-                j+=1
-                i=j
-                
-            else:    
-                store=store+s[i]
-                i += 1
-                # print("i=",i)
-                # if len(longest) < len(store):
-                #     longest = store   
-                #     print("longest=",longest,store)
-                #     store=""
-                    
-                    # index=s.index(s[i])
-                    # print("--",index)
-                    # for j in range(index,i):
-                    #     print("j-",j)
-                    #     if s[j] not in store:
-                    #         store=store+s[j]
-                    #         print("store=",store)
+        length=0
         
-        # print(store, len(longest))
-        if len(longest) < len(store):
-            longest = store   
-            
-        return len(longest)         
+        for j in range(len(s)):
+            if s[j] in checked:
+                print(checked[s[j]] , i)
+                if checked[s[j]] < i:
+                    length=max(length, j-i+1)
+                else:
+                    i = checked[s[j]]+1
+            else:
+                length=max(length, j-i+1)
+            checked[s[j]] = j
+            # print(checked, length)
+        return length    
+                
