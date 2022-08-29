@@ -13,11 +13,11 @@ class Solution:
                 i+=1
             elif minval == height[j]:
                 j-=1
-            else:
-                print("here")
+#             else:
+#                 print("here")
                 
             
                 
-            print(minval,maxarea)    
+#             print(minval,maxarea)    
         
         return maxarea
