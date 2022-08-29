@@ -10,7 +10,7 @@ class Solution:
         
         for j in range(len(s)):
             if s[j] in checked:
-                print(checked[s[j]] , i)
+                # print(checked[s[j]] , i)
                 if checked[s[j]] < i:
                     length=max(length, j-i+1)
                 else:
