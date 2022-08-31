@@ -11,11 +11,11 @@ class Solution:
         visited=set()
         
         while curr!=None:
-            # print(visited)
-            if curr in visited:
-                return True
+            # print(visited,"\n")
+            
             visited.add(curr)
             curr=curr.next
-            
+            if curr in visited:
+                return True
                 
         return False        
