@@ -9,6 +9,8 @@ class Solution:
             strx_rev = '-' + strx_rev
         # print((int(strx_rev)))
         
-        if x <= (-2 ** 31) or x >= ((2 ** 31)-1) or int(strx_rev) <= (-2 ** 31) or int(strx_rev) >= ((2 ** 31)-1):
+        if x <= (-2 ** 31) or x >= ((2 ** 31)-1):
+            return 0
+        elif int(strx_rev) <= (-2 ** 31) or int(strx_rev) >= ((2 ** 31)-1):
             return 0
         return int(strx_rev)
