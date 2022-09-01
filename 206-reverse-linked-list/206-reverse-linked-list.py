@@ -15,5 +15,4 @@ class Solution:
             prev = curr
             curr = next
         
-        head = prev
-        return head  
+        return prev  
