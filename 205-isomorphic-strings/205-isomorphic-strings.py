@@ -7,9 +7,9 @@ class Solution:
             if s[i] not in dic :
                 dic[s[i]] = t[i]
             else:
-                print(i,dic[s[i]], t[i])
+                # print(i,dic[s[i]], t[i])
                 if dic[s[i]] != t[i]:
-                    print(dic) 
+                    # print(dic) 
                     return False
         if len(set(dic.values())) != len(dic.values()): 
             return False           
