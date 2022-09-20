@@ -1,18 +1,18 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         
-        if nums ==[]:
-            return [-1,-1]
+#         if nums ==[]:
+#             return [-1,-1]
         
         l=0
         r=len(nums)-1
         ans=[]
         
-        if l == r:
-            if nums[l] == target:
-                return [l,r]
-            else:
-                return [-1,-1]
+        # if l == r:
+        #     if nums[l] == target:
+        #         return [l,r]
+        #     else:
+        #         return [-1,-1]
         
         
         while (l<=r):
@@ -24,9 +24,7 @@ class Solution:
                 while r<=len(nums)-1 and nums[r]==target:
                     r=r+1
                 return [l+1,r-1]    
-             
             if nums[mid] < target :
-                # print("here")
                 l=mid+1
             if nums[mid] > target :
                 r=mid-1
