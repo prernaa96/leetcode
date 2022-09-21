@@ -9,5 +9,5 @@ class Solution:
         maxval = max(setnum)
         setnum.remove(maxval)
         return max(setnum)
-        print(setnum)
+        # print(setnum)
         
