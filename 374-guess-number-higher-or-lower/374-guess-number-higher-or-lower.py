@@ -14,11 +14,9 @@ class Solution:
         l=0
         r=n
         
-        
         while(l<=r):
             mid = (l+r)//2
             ans=guess(mid)
-            print(ans,mid)
             if ans == 0:
                 return mid
             elif ans == -1:
