@@ -1,7 +1,6 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         
-        chars=[]
         string=""
         
         i,j=0,0
