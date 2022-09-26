@@ -13,7 +13,6 @@ class Solution:
                 j+=1
             else:
                 j+=1
-        print(string)
         
         if string == s:
             return True
