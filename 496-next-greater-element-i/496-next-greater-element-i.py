@@ -9,7 +9,6 @@ class Solution:
             if nums1[i] in nums2 :
                 index = nums2.index(nums1[i])
                 j=index+1
-                print("j==",j)
                 
                 while j <= len(nums2)-1:
                     if nums2[j]>nums2[index]:
@@ -17,7 +16,6 @@ class Solution:
                         j=0
                         break
                     else:
-                        print("--else----", j)
                         if j == len(nums2)-1:
                             ans.append(-1)
                         j+=1
