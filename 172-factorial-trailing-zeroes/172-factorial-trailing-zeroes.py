@@ -6,12 +6,10 @@ class Solution:
         a = n/5
         b = a//5
         n=a+b
-        print(n)
 
         while b>=5:
             b=b//5
             c=c+b
-            print(b,c)
         n=n+c
             
         return int(n)
