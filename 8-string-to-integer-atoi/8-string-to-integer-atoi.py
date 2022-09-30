@@ -1,15 +1,12 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
-        
-        # print(int(s))
+
         s=s.strip()
         temp=""
         sign=0
         
         if len(s)==0:
             return 0
-        
-        print(s)
         
         start=1
         
@@ -30,7 +27,6 @@ class Solution:
                 break
         if sign==1:
             temp='-'+temp
-        print("---->",temp)
         if temp=='-'or temp=='+' or len(temp)==0:
             return 0
         temp=int(temp)
