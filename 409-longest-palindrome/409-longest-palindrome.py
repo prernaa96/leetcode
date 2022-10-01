@@ -5,8 +5,7 @@ class Solution:
         flag=False
         for i in range(len(s)):
             dic[s[i]] = dic.get(s[i],0)+1
-        print(dic)
-        
+
         c=0
         maxval=0
         for v in dic.values():
@@ -18,7 +17,6 @@ class Solution:
         
         if flag==True:
             c=c+1
-        print(c)
         
         return c
                 
