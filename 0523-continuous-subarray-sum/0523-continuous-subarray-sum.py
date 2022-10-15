@@ -13,11 +13,6 @@ class Solution:
                 prefixSum[res]=i
         
         return False
-    
-        
-   
-  # 2,2,4,1,1      
-
         
         
         
