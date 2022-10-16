@@ -13,8 +13,6 @@ class Solution:
             if k!=0:
                 arr.append(i[0])
                 k-=1
-            print(arr)
-        # print(sorted(arr))
         return arr
             
             
