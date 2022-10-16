@@ -5,8 +5,7 @@ class Solution:
         
         for i in range(len(words)):
             dic[words[i]] = dic.get(words[i],0)+1
-        print(dic)
-        
+            
         arr=[]
         maxval=0
         
