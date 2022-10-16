@@ -9,9 +9,7 @@ class Solution:
         for i in range(len(s)):
             if s[i] not in dic:
                  dic[s[i]] = t[i]
-            # print(dic)
             else:
-                print(t[i], dic[s[i]])
                 if t[i] != dic[s[i]]:
                     return False
         return True
