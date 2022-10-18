@@ -16,7 +16,6 @@ class Solution:
         return graph
         
     def checkpath(self,graph,src,dest,vis):
-        print(src,dest)
         if src==dest:
             return True
         if src in vis:
