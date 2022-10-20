@@ -15,7 +15,6 @@ class Solution:
                 while(stack and stack[-1].isdigit()):
                     checkNum=stack.pop()+checkNum
                 stack.append(int(checkNum) * string)
-                print(stack)
         ans=""
         for i in stack:
             ans+=i
