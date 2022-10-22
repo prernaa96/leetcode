@@ -15,7 +15,6 @@ class Solution:
             
             if stack[-1][1]==k:
                 stack.pop()
-        print(stack)
         for i in range(len(stack)):
             ans=ans+(stack[-1][0]*stack[-1][1])
             stack.pop()
