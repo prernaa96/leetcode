@@ -9,6 +9,5 @@ class Solution:
         string=""
         for key in sorted(dic, key=dic.get, reverse=True):
             string+= key*dic[key]
-        print(string)
         
         return string
