@@ -11,7 +11,6 @@ class Solution:
         
         tokens.sort()
         j=len(tokens)-1
-        print("j=",j)
         i=0
         score=0
         maxscore=0
@@ -22,23 +21,16 @@ class Solution:
             return 0
         
         while i<=(len(tokens)-1) and i<=j:
-            print(tokens[i])
             if power>=tokens[i]:
                 power=power-tokens[i]
                 score+=1
                 maxscore=max(score,maxscore)
                 i+=1
-                print("coming in--",score,power)
             else:
-                print("in else")
                 if score==0:
                     return 0
                 if score>=1 and j>=0:
                     power=power+tokens[j]
                     score-=1
                     j-=1
-                
-            print("---->",power,score)
-            print("i,j---->",i,j)
-        
         return maxscore
