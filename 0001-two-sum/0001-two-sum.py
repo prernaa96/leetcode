@@ -12,12 +12,9 @@ class Solution:
         
         for i in range(len(nums)):
             values[i]=target-nums[i]
-        # print(values)
         
         for i in range(len(values)):
             if values[i] in nums:
-                indexval = i
-                indexnum = nums.index(values[i])
-                if indexval != indexnum:
-                    return [indexval,indexnum]
+                if i != nums.index(values[i]):
+                    return [i,nums.index(values[i])]
             
