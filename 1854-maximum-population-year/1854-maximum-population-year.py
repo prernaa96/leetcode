@@ -11,8 +11,6 @@ class Solution:
         
         logs.sort()
         arr=[]
-        x=[]
-        y=[]
         maxval=0
         c=0
         min_year,max_year=0,0
