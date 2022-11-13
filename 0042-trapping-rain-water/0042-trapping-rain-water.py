@@ -14,7 +14,7 @@ class Solution:
                 while(l > 0 and height[stack[-1]] <= height[i]):
                     ht = height[stack.pop()]
                     l = l - 1
-                    ans = ans + (0 if l == 0 else (min(height[i],height[stack[l - 1]]) - ht) * (i - stack[l - 1] - 1))                    
+                    ans = ans + (0 if l == 0 else (min(height[i],height[stack[-1]]) - ht) * (i - stack[-1] - 1))                    
                 stack.append(i)
         return ans
         
