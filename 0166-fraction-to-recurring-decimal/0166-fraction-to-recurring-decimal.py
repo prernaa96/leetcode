@@ -12,9 +12,10 @@ class Solution:
         seen = {}
         
         while remainder > 0:
-            last_remainder = remainder
+            # last_remainder = remainder
+            seen[remainder] = len(decimal)
             digi, remainder = divmod(remainder * 10, denominator)
-            seen[last_remainder] = len(decimal)
+            
             decimal += str(digi)
 
             if remainder in seen:
