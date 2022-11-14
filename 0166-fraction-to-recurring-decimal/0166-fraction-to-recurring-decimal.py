@@ -7,7 +7,6 @@ class Solution:
         numerator, denominator = abs(numerator), abs(denominator)
         
         integer, remainder = divmod(numerator, denominator)
-        print(integer,remainder)
         
         decimal = ''
         seen = {}
@@ -16,14 +15,10 @@ class Solution:
             last_remainder = remainder
             digi, remainder = divmod(remainder * 10, denominator)
             seen[last_remainder] = len(decimal)
-            print(seen)
             decimal += str(digi)
-            print(decimal)
 
             if remainder in seen:
-                print("rem=",remainder)
                 index = seen[remainder]
-                print("--",index)
                 decimal = decimal[:index] + '(' + decimal[index:] + ')'
                 break
 
