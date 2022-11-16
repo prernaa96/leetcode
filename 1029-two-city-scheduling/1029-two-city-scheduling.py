@@ -1,21 +1,22 @@
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
         
-        a_cost=0
-        diffs=[]
+        #Subtact a,b to get lower costs for a in length/2. Other half(<length/2)
+        #will have lowest costs for b.
+        #Sorted by a-b.
         
-        for i in costs:
-            a_cost+=i[0]
+
+        diff = []
+        for a, b in costs:
+            diff.append([a-b, a, b])
+
+        diff.sort()
         
-        for j in range(len(costs)):
-            diffs.append(costs[j][1]-costs[j][0])
-        
-        diffs.sort()
-        minus=0
-        for k in range(len(diffs)):
-            minus+=diffs[k]
-            if k==(len(costs)/2)-1:
-                break
-        
-        total_cost = a_cost+minus
-        return total_cost
+        res = 0
+        for i in range(len(diff)):
+            if i<len(diff) / 2 :
+                res += diff[i][1]
+            else:
+                res += diff[i][2]
+            
+        return res
