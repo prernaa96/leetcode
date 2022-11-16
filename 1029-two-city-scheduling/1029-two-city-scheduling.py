@@ -3,7 +3,8 @@ class Solution:
         
         #Subtact a,b to get lower costs for a in length/2. Other half(<length/2)
         #will have lowest costs for b.
-        #Sorted by a-b.
+        #Sorted by a-b. [acost followed by bcost]
+        #Optimize - costs.sort(key = lambda x: x[0] - x[1]) - costs arr will be sorted and a_cost will be first n elements and b will be next n. Save space.
         
 
         diff = []
