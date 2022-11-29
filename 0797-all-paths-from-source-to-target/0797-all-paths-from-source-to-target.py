@@ -1,12 +1,16 @@
 class Solution:
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
 
-        def dfs(src,graph,res,path=[0]):
-            if src==len(graph)-1:
-                res.append(path)
-
-            for i in graph[src]:
-                dfs(i,graph,res,path+[i])
+        #Path=[0] adds element 0 to path
+        def dfs(start,graph,result,path=[0]):
+            #check if node = n-1 and append existing calculated path
+            if start==len(graph)-1:
+                result.append(path)
+            
+            #DFS and keep track of the path created to reach last node
+            for i in graph[start]:
+                print(path)
+                dfs(i, graph,result,path+[i])
         
         result=[]
         dfs(0,graph,result)
