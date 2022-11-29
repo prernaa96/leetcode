@@ -1,22 +1,28 @@
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
         
-        stack=[]
+        stack = []
         ans=""
-
-        for i in s:
+        
+        for i in range(len(s)):
+            # print(s[i],stack)
             if not stack:
-                stack.append([i,1])
+                stack.append([s[i],1])
                 continue
-            if i ==stack[-1][0]:
+                
+            if s[i] == stack[-1][0]:
                 stack[-1][1]+=1
+                # print(stack)
             else:
-                stack.append([i,1])
+                stack.append([s[i],1])
             
-            if stack[-1][1]==k:
+            if stack[-1][1] == k:
                 stack.pop()
-        for i in range(len(stack)):
-            ans=ans+(stack[-1][0]*stack[-1][1])
-            stack.pop()
-        return ans[::-1]
+            
+            # print("===>",stack)
+            
+        for i in stack:
+            ans = ans+i[0]*i[1]
+        return ans
+        
             
